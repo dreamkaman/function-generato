@@ -2,4 +2,8 @@ function* test() {
   console.log("First");
 }
 
-console.log(test());
+const generator = test();
+
+generator.next();
+
+console.dir(generator);
