@@ -3,45 +3,49 @@ function* test() {
 
   yield 1;
 
-//   return 1.5;
+  //   return 1.5;
 
-  console.log('Second');
+  console.log("Second");
 
   yield 2;
 
-  console.log('Third');
+  console.log("Third");
 
   yield 3;
 
-  console.log('Fourth');
+  console.log("Fourth");
 
   yield 4;
-  console.log('Fifth');
-  return 5
+  console.log("Fifth");
+  return 5;
 }
 
 const generator = test();
 
-// const result=generator.next();
+console.log(generator);
 
-console.log('Before');
+for (let value of generator) {
+  alert(value);
+}
+
+console.log("Before");
 
 console.log(generator.next());
 
-console.log('After next-1');
+console.log("After next-1");
 
 console.log(generator.next());
 // generator.next();
 
-console.log('After next-2');
+console.log("After next-2");
 
 console.log(generator.next());
 // generator.next();
 
-console.log('After next-3');
+console.log("After next-3");
 
 console.log(generator.next());
 
-console.log('After next-4');
+console.log("After next-4");
 
 console.log(generator.next());
